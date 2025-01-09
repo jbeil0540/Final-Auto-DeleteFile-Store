@@ -37,7 +37,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
 START_PIC = os.environ.get("START_PIC","")
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "<b>Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.<b>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6744829563 7056014024").split()):
@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>Please Click on 'JOIN CHANNEL' button and Join,\nThen click on 'TRY AGAIN' button to get your file</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>Hello {first}\n\n<b>Please Click on 'JOIN CHANNEL' button and Join,\nThen click on 'TRY AGAIN' button to get your file</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>[TG:-@PicXTV] {previouscaption}</b>")
@@ -56,8 +56,8 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 
 # Auto delete time in seconds.
 AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "600"))
-AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "⚠️ Warning ⚠️ \nThis file will be automatically deleted in 10 minutes. \n📌Please forward and save this content somwhere else before start downloading.")
-AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted.")
+AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "<b>⚠️ Warning ⚠️ \nThis file will be automatically deleted in 10 minutes. \n📌Please forward and save this content somwhere else before start downloading.<b>")
+AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "<b>Your file has been successfully deleted.<b>")
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", "True") == 'True'
