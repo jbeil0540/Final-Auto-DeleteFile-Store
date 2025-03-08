@@ -257,3 +257,11 @@ Unsuccessful: <code>{unsuccessful}</code></b>"""
         await asyncio.sleep(8)
         await msg.delete()
 
+@Bot.on_message(filters.command('dbcheck') & filters.private)
+async def db_check(client, message):
+    try:
+        users = await full_userbase()
+        user_list = ", ".join(map(str, users)) if users else "No users found"
+        await message.reply(f"Total users: {len(users)}\nUsers: {user_list}")
+    except Exception as e:
+        await message.reply(f"Database error: {e}")
