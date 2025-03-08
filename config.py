@@ -29,6 +29,10 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
+dbclient = pymongo.MongoClient(DB_URI)
+database = dbclient[DB_NAME]
+print(f"Connected to DB: {DB_URI}, Database: {DB_NAME}")
+
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002422759605"))
 JOIN_REQUEST_ENABLE = os.environ.get("JOIN_REQUEST_ENABLED", None)
