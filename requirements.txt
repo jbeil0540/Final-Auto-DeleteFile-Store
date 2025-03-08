@@ -3,7 +3,6 @@ pyrofork==2.3.43
 pyrogram
 TgCrypto
 pyromod==1.5
-python-dotenv
 # --- For-Database ------------ #
 pymongo
 dnspython
