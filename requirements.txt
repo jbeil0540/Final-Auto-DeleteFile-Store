@@ -5,7 +5,7 @@ TgCrypto
 pyromod==1.5
 python-dotenv
 # --- For-Database ------------ #
-pymongo
+pymongo[srv]
 dnspython
 # --- For-Web-Response ------- #
 aiohttp
