@@ -25,10 +25,8 @@ async def add_user(user_id: int):
 
 async def full_userbase():
     user_docs = user_data.find()
-    user_ids = []
-    for doc in user_docs:
-        user_ids.append(doc['_id'])
-        
+    user_ids = [doc['_id'] for doc in user_docs]
+    print(f"Fetched users: {user_ids}")  # Debug log
     return user_ids
 
 async def del_user(user_id: int):
