@@ -4,6 +4,7 @@ import os
 import logging
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
+import pymongo
 
 load_dotenv()
 
@@ -60,7 +61,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 
 # Auto delete time in seconds.
 AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "600"))
-AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "⚠️ WARNING ⚠️\nThis file will be automatically deleted in {time} seconds. \n📌<b>Please forward and save this content somwhere else before start downloading.")
+AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "⚠️ WARNING ⚠️\nThis file will be automatically deleted in 10 minutes. \n📌<b>Please forward and save this content somwhere else before start downloading.")
 AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted.")
 
 #Set true if you want Disable your Channel Posts Share button
