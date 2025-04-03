@@ -1,6 +1,7 @@
 # --- For-Bot-Working --------- #
-pyrofork==2.3.43
-pyrogram
+#pyrofork==2.3.43
+#pyrogram
+git+https://github.com/ps-updates/pyrogram
 TgCrypto
 pyromod==1.5
 python-dotenv
